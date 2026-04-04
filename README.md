@@ -76,4 +76,4 @@ Separate repositories showcase full-page website work for two healthcare compani
 
 **Note:** Some documents have been redacted to protect client confidentiality. Files marked "Redacted" have had proprietary data removed while preserving the strategic framework and creative execution.
 
-*For inquiries, connect with me on [LinkedIn](https://www.linkedin.com/in/nicolebroomhead/).*
+*For inquiries, connect with me on [LinkedIn](https://www.linkedin.com/in/nicole-broomhead/).*
