@@ -37,7 +37,7 @@ Product onesheets, brochures, and clinical impact stories showcasing product eff
 
 | File | Company | Description |
 |------|---------|-------------|
-| [Rad AI Continuity Overview](./content-strategy/rad-ai-continuity-overview.pdf) | Rad AI | AI-automated patient follow-up tracking 50+ findings with 2x increased adherence. |
+| [Rad AI Continuity Overview](./onesheets-case-studies/rad-ai-continuity-overview.pdf) | Rad AI | AI-automated patient follow-up tracking 50+ findings with 2x increased adherence. |
 | [LucidHealth Case Study](./onesheets-case-studies/lucidhealth-rad-ai-impressions-case-study.pdf) | Rad AI | Customer success story showcasing AI-driven radiology workflow outcomes. |
 | [Colorado Imaging Case Study](./onesheets-case-studies/colorado-imaging-associates-rad-ai-impressions-case-study.pdf) | Rad AI | Implementation story highlighting measurable efficiency results for large groups. |
 | [CT CoPilot Brochure](./onesheets-case-studies/ct-copilot-brochure-cortechs.pdf) | Cortechs.ai | Product brochure for an AI-powered neuroimaging analysis tool. |
@@ -53,6 +53,7 @@ Produced brand commercials, flagship keynote events, and internal culture films.
 * **[Rad AI 2024 Launch Day](https://drive.google.com/file/d/1rwmUeTcdtfAP-i7D2bqrBi_roRnfCJ1D/view)**: Keynote presentation and product reveals from the 2024 flagship event.
 * **[Reporting Commercial](https://youtu.be/NhHII0Uzjeg)**: "Waiting for the Beep" — A brand campaign highlighting reporting efficiency.
 * **[Life at Rad AI](https://youtu.be/5NS4m9lMgMI)**: Culture film exploring the company mission and the "Three Cs" DNA.
+* **[Pitfalls of Legacy Radiology Reporting Software](https://youtu.be/asn4U8w1A4I)**: Product-focused video on the limitations of legacy reporting tools.
 * **[Clinical Thought Leadership](https://youtu.be/dswY1RyZvVo)**: Dr. Ainsley MacLean on simplifying care delivery through AI documentation.
 
 ---
