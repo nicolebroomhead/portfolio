@@ -53,7 +53,7 @@
     .section-desc { font-size: 15px; color: var(--ink-light); line-height: 1.6; margin-bottom: 32px; max-width: 620px; padding-left: 2px; border-top: 1px solid var(--rule); padding-top: 16px; margin-top: 12px; }
 
     /* CARDS */
-    .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
     .card { background: var(--white); padding: 28px 28px 24px; text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 10px; transition: background 0.2s; position: relative; }
     .card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--teal); transition: height 0.25s ease; }
     .card:hover { background: var(--teal-light); }
@@ -64,10 +64,6 @@
     .card-cta { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal-dark); margin-top: 4px; }
     .card-cta svg { transition: transform 0.2s; }
     .card:hover .card-cta svg { transform: translateX(4px); }
-
-    /* VIDEO WRAPPER */
-    .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin-bottom: 24px; border: 1px solid var(--rule); }
-    .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
 
     /* WEBSITE CARDS */
     .website-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
@@ -80,10 +76,36 @@
     .website-card-desc { font-size: 13px; color: #A8C5C3; line-height: 1.55; }
     .website-card-url { font-size: 12px; color: var(--teal-mid); font-weight: 500; margin-top: auto; padding-top: 8px; }
 
+    /* VIDEO SECTION */
+    .video-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(480px, 1fr)); gap: 28px; }
+    .video-block { display: flex; flex-direction: column; gap: 12px; }
+    .video-label { font-size: 10px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); }
+    .video-title { font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600; color: var(--ink); line-height: 1.3; }
+    .video-embed { position: relative; width: 100%; padding-bottom: 56.25%; background: var(--ink); border: 1px solid var(--rule); overflow: hidden; }
+    .video-embed iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+
+    /* FEATURED VIDEO (full-width Drive embed) */
+    .video-featured { margin-bottom: 40px; }
+    .video-featured .video-embed { border: 2px solid var(--teal); }
+    .video-featured .video-title { font-size: 18px; }
+
     /* FOOTER */
     footer { background: var(--ink); color: #A8C5C3; text-align: center; padding: 40px; font-size: 13px; line-height: 1.8; }
     footer a { color: var(--teal-mid); text-decoration: none; font-weight: 500; }
     footer a:hover { color: var(--white); }
+
+    /* ANIMATIONS */
+    .fade-in { opacity: 0; transform: translateY(20px); animation: fadeUp 0.6s ease forwards; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    .fade-in:nth-child(1) { animation-delay: 0.05s; }
+    .fade-in:nth-child(2) { animation-delay: 0.12s; }
+    .fade-in:nth-child(3) { animation-delay: 0.19s; }
+    .fade-in:nth-child(4) { animation-delay: 0.26s; }
+    .fade-in:nth-child(5) { animation-delay: 0.33s; }
+    .fade-in:nth-child(6) { animation-delay: 0.40s; }
+    .fade-in:nth-child(7) { animation-delay: 0.47s; }
+    .fade-in:nth-child(8) { animation-delay: 0.54s; }
+    .fade-in:nth-child(9) { animation-delay: 0.61s; }
 
     /* RESPONSIVE */
     @media (max-width: 700px) {
@@ -93,6 +115,7 @@
       .nav-inner a { padding: 14px 16px 12px; white-space: nowrap; }
       .website-grid { grid-template-columns: 1fr; }
       .card-grid { grid-template-columns: 1fr; }
+      .video-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -103,7 +126,7 @@
   <div class="header-inner">
     <p class="header-eyebrow">Marketing Portfolio</p>
     <h1>Nicole<br><em>Broomhead</em></h1>
-    <p class="header-bio">Senior marketing leader with 10+ years of experience in healthcare AI and biopharma. Specializing in translating complex clinical concepts into narratives that drive adoption, engagement, and growth.</p>
+    <p class="header-bio">Senior marketing communications professional with 10+ years of experience in healthcare AI, radiology AI, and biopharma. Specializing in content strategy, brand, sales enablement, and go-to-market execution.</p>
     <div class="header-tags">
       <span class="tag">Healthcare AI</span>
       <span class="tag">B2B SaaS</span>
@@ -118,9 +141,9 @@
   <div class="nav-inner">
     <a href="#content-strategy">Content Strategy</a>
     <a href="#onesheets">Onesheets & Case Studies</a>
-    <a href="#multimedia">Video & Multimedia</a>
     <a href="#blog">Blog</a>
     <a href="#website-work">Website Work</a>
+    <a href="#video">Video</a>
   </div>
 </nav>
 
@@ -131,42 +154,42 @@
       <span class="section-number">01</span>
       <h2 class="section-title">Content Strategy</h2>
     </div>
-    <p class="section-desc">Strategic planning documents, sales enablement assets, and communications frameworks across healthcare AI and life sciences.</p>
+    <p class="section-desc">Strategic planning documents, sales enablement assets, and communications frameworks across healthcare AI and biopharma organizations.</p>
     <div class="card-grid">
-      <a class="card" href="./content-strategy/webinar-marcomm-strategy-sample.pdf" target="_blank">
+      <a class="card fade-in" href="./content-strategy/webinar-marcomm-strategy-sample.pdf" target="_blank">
         <span class="card-company">Rad AI</span>
         <span class="card-title">Webinar MarComm Strategy</span>
-        <span class="card-desc">End-to-end program strategy; program averaged 160 registrations per session.</span>
+        <span class="card-desc">End-to-end webinar program strategy; program averaged 160 registrations per session.</span>
         <span class="card-cta">View PDF <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </a>
-      <a class="card" href="./content-strategy/rad-ai-master-sales-deck-2025.pdf" target="_blank">
-        <span class="card-company">Rad AI</span>
-        <span class="card-title">Master Sales Deck 2025</span>
-        <span class="card-desc">Core sales enablement deck used across enterprise and health system outreach.</span>
-        <span class="card-cta">View PDF <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-      </a>
-      <a class="card" href="./content-strategy/cortechs-sales-email-templates.pdf" target="_blank">
+      <a class="card fade-in" href="./content-strategy/cortechs-sales-email-templates.pdf" target="_blank">
         <span class="card-company">Cortechs.ai</span>
         <span class="card-title">Sales Email Templates</span>
         <span class="card-desc">Demand generation email sequence for clinical and enterprise buyers.</span>
         <span class="card-cta">View PDF <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </a>
-      <a class="card" href="./content-strategy/engagement-strategy-biopharma-disease-state-awareness.pdf" target="_blank">
+      <a class="card fade-in" href="./content-strategy/engagement-strategy-biopharma-disease-state-awareness.pdf" target="_blank">
         <span class="card-company">Fishawack Health</span>
         <span class="card-title">Biopharma Engagement Strategy</span>
         <span class="card-desc">Disease state awareness strategy targeting biopharma and HCP audiences.</span>
         <span class="card-cta">View PDF <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </a>
-      <a class="card" href="./content-strategy/caregiver-patient-crm-strategy-redacted.pdf" target="_blank">
+      <a class="card fade-in" href="./content-strategy/caregiver-patient-crm-strategy-redacted.pdf" target="_blank">
         <span class="card-company">Fishawack Health</span>
         <span class="card-title">Caregiver & Patient CRM Strategy</span>
         <span class="card-desc">Redacted CRM strategy for a patient and caregiver engagement program.</span>
         <span class="card-cta">View PDF <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </a>
-      <a class="card" href="./content-strategy/2022-ets-comms-plan.pdf" target="_blank">
+      <a class="card fade-in" href="./content-strategy/2022-ets-comms-plan.pdf" target="_blank">
         <span class="card-company">Emerging Therapy Solutions</span>
         <span class="card-title">ETS Comms Plan 2022</span>
         <span class="card-desc">Annual communications plan for the Emerging Therapy Solutions division.</span>
+        <span class="card-cta">View PDF <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+      <a class="card fade-in" href="./content-strategy/ets-social-measurement-recommendations.pdf" target="_blank">
+        <span class="card-company">Emerging Therapy Solutions</span>
+        <span class="card-title">ETS Social Measurement & Recommendations</span>
+        <span class="card-desc">Social media performance analysis with strategic recommendations.</span>
         <span class="card-cta">View PDF <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </a>
     </div>
@@ -179,107 +202,104 @@
     </div>
     <p class="section-desc">Product onesheets, brochures, and customer case studies across healthcare AI and medical imaging.</p>
     <div class="card-grid">
-      <a class="card" href="./content-strategy/rad-ai-continuity-overview.pdf" target="_blank">
-        <span class="card-company">Rad AI</span>
-        <span class="card-title">Continuity Product Overview</span>
-        <span class="card-desc">AI-automated patient follow-up solution tracking 50+ finding categories to catch 100+ probable cancers annually.</span>
-        <span class="card-cta">View PDF <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-      </a>
-      <a class="card" href="./onesheets-case-studies/lucidhealth-rad-ai-impressions-case-study.pdf" target="_blank">
+      <a class="card fade-in" href="./onesheets-case-studies/lucidhealth-rad-ai-impressions-case-study.pdf" target="_blank">
         <span class="card-company">Rad AI</span>
         <span class="card-title">LucidHealth Case Study</span>
         <span class="card-desc">Customer success story showcasing AI-driven radiology workflow outcomes.</span>
         <span class="card-cta">View PDF <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </a>
-      <a class="card" href="./onesheets-case-studies/colorado-imaging-associates-rad-ai-impressions-case-study.pdf" target="_blank">
+      <a class="card fade-in" href="./onesheets-case-studies/colorado-imaging-associates-rad-ai-impressions-case-study.pdf" target="_blank">
         <span class="card-company">Rad AI</span>
-        <span class="card-title">Colorado Imaging Case Study</span>
-        <span class="card-desc">Radiology group implementation story highlighting measurable efficiency results.</span>
+        <span class="card-title">Colorado Imaging Associates Case Study</span>
+        <span class="card-desc">Radiology group implementation story with measurable efficiency results.</span>
         <span class="card-cta">View PDF <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </a>
-      <a class="card" href="./onesheets-case-studies/ct-copilot-brochure-cortechs.pdf" target="_blank">
+      <a class="card fade-in" href="./onesheets-case-studies/rad-ai-continuity-overview.pdf" target="_blank">
+        <span class="card-company">Rad AI</span>
+        <span class="card-title">Rad AI Continuity Overview</span>
+        <span class="card-desc">Product overview for Rad AI Continuity, an AI-automated patient follow-up solution that doubles follow-up rates and catches 100+ probable cancers annually.</span>
+        <span class="card-cta">View PDF <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+      <a class="card fade-in" href="./onesheets-case-studies/ct-copilot-brochure-cortechs.pdf" target="_blank">
         <span class="card-company">Cortechs.ai</span>
         <span class="card-title">CT CoPilot Brochure</span>
         <span class="card-desc">Product brochure for an AI-powered neuroimaging analysis tool.</span>
         <span class="card-cta">View PDF <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </a>
-      <a class="card" href="./onesheets-case-studies/onq-prostate-onesheet-cortechs.pdf" target="_blank">
+      <a class="card fade-in" href="./onesheets-case-studies/onq-prostate-onesheet-cortechs.pdf" target="_blank">
         <span class="card-company">Cortechs.ai</span>
         <span class="card-title">OnQ Prostate Onesheet</span>
         <span class="card-desc">Clinical onesheet for a prostate MRI analysis product.</span>
         <span class="card-cta">View PDF <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </a>
-      <a class="card" href="./onesheets-case-studies/mindset-integrated-investor-brief-redacted.pdf" target="_blank">
+      <a class="card fade-in" href="./onesheets-case-studies/mindset-integrated-investor-brief-redacted.pdf" target="_blank">
         <span class="card-company">Mindset Integrated</span>
         <span class="card-title">Investor Brief</span>
-        <span class="card-desc">Strategic communications for an early-stage brain injury imaging startup.</span>
+        <span class="card-desc">Strategic communications piece for an early-stage brain injury imaging startup.</span>
         <span class="card-cta">View PDF <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-      </a>
-    </div>
-  </section>
-
-  <section class="section" id="multimedia">
-    <div class="section-header">
-      <span class="section-number">03</span>
-      <h2 class="section-title">Video & Multimedia</h2>
-    </div>
-    <p class="section-desc">Produced brand commercials, flagship keynote events, and internal culture films.</p>
-    
-    <div class="video-container">
-      <iframe src="https://drive.google.com/file/d/1rwmUeTcdtfAP-i7D2bqrBi_roRnfCJ1D/preview"></iframe>
-    </div>
-
-    <div class="card-grid">
-      <a class="card" href="https://youtu.be/NhHII0Uzjeg" target="_blank">
-        <span class="card-company">Rad AI</span>
-        <span class="card-title">Reporting Commercial</span>
-        <span class="card-desc">"Waiting for the Beep" — A brand campaign highlighting reporting efficiency.</span>
-        <span class="card-cta">Watch Video <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-      </a>
-      <a class="card" href="https://youtu.be/5NS4m9lMgMI" target="_blank">
-        <span class="card-company">Rad AI</span>
-        <span class="card-title">Life at Rad AI</span>
-        <span class="card-desc">Culture film exploring the company mission and the "Three Cs" DNA.</span>
-        <span class="card-cta">Watch Video <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-      </a>
-      <a class="card" href="https://youtu.be/dswY1RyZvVo" target="_blank">
-        <span class="card-company">Rad AI</span>
-        <span class="card-title">Ainsley MacLean, MD on AI Complexity</span>
-        <span class="card-desc">Thought leadership interview on simplifying care delivery through AI.</span>
-        <span class="card-cta">Watch Video <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </a>
     </div>
   </section>
 
   <section class="section" id="blog">
     <div class="section-header">
-      <span class="section-number">04</span>
+      <span class="section-number">03</span>
       <h2 class="section-title">Blog & Thought Leadership</h2>
     </div>
-    <p class="section-desc">B2B healthcare AI articles covering clinical workflow, AI adoption, and industry trends.</p>
+    <p class="section-desc">B2B healthcare AI articles written for Rad AI, covering clinical workflow, AI adoption, and industry trends.</p>
     <div class="card-grid">
-      <a class="card" href="./blog/the-next-era-of-healthcare-ai-adoption-unlocking-a-sustainable-future.html" target="_blank">
+      <a class="card fade-in" href="./blog/the-next-era-of-healthcare-ai-adoption-unlocking-a-sustainable-future.html" target="_blank">
         <span class="card-company">Rad AI</span>
-        <span class="card-title">Sustainable AI Adoption</span>
-        <span class="card-desc">Long-form thought leadership on scaling AI and building trust within clinical teams.</span>
+        <span class="card-title">The Next Era of Healthcare AI Adoption</span>
+        <span class="card-desc">Long-form thought leadership on sustainable AI adoption in healthcare.</span>
         <span class="card-cta">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </a>
-      <a class="card" href="./blog/stop-piloting-start-scaling-what-healthcare-really-needs-from-ai.html" target="_blank">
+      <a class="card fade-in" href="./blog/stop-piloting-start-scaling-what-healthcare-really-needs-from-ai.html" target="_blank">
         <span class="card-company">Rad AI</span>
         <span class="card-title">Stop Piloting, Start Scaling</span>
         <span class="card-desc">Opinionated take on the gap between AI pilots and real-world implementation.</span>
         <span class="card-cta">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </a>
-      <a class="card" href="./blog/beyond-the-ai-hype-what-radiologists-can-teach-healthcare-innovation-teams-about-ai-that-actually-works.html" target="_blank">
+      <a class="card fade-in" href="./blog/beyond-the-ai-hype-what-radiologists-can-teach-healthcare-innovation-teams-about-ai-that-actually-works.html" target="_blank">
         <span class="card-company">Rad AI</span>
         <span class="card-title">Beyond the AI Hype</span>
         <span class="card-desc">Clinical perspective on what makes AI actually work in radiology settings.</span>
         <span class="card-cta">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </a>
-      <a class="card" href="./blog/from-fatigue-to-focus-how-ai-radiology-software-strengthens-the-modern-workflow.html" target="_blank">
+      <a class="card fade-in" href="./blog/from-fatigue-to-focus-how-ai-radiology-software-strengthens-the-modern-workflow.html" target="_blank">
         <span class="card-company">Rad AI</span>
         <span class="card-title">From Fatigue to Focus</span>
-        <span class="card-desc">How AI support radiologist workflow and reduces burnout.</span>
+        <span class="card-desc">How AI radiology software supports radiologist workflow and reduces burnout.</span>
+        <span class="card-cta">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+      <a class="card fade-in" href="./blog/enhancing-radiology-efficiency-with-ai-insights-from-new-study-on-intracranial-hemorrhage-detection.html" target="_blank">
+        <span class="card-company">Rad AI</span>
+        <span class="card-title">Enhancing Radiology Efficiency with AI</span>
+        <span class="card-desc">Research-backed piece on AI's role in intracranial hemorrhage detection.</span>
+        <span class="card-cta">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+      <a class="card fade-in" href="./blog/healthcare-leaders-reveal-the-foundations-of-scalable-ai.html" target="_blank">
+        <span class="card-company">Rad AI</span>
+        <span class="card-title">Healthcare Leaders Reveal the Foundations of Scalable AI</span>
+        <span class="card-desc">Industry perspective on what it takes to scale AI across health systems.</span>
+        <span class="card-cta">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+      <a class="card fade-in" href="./blog/why-transparency-is-redefining-trust-in-healthcare-ai.html" target="_blank">
+        <span class="card-company">Rad AI</span>
+        <span class="card-title">Why Transparency Is Redefining Trust in Healthcare AI</span>
+        <span class="card-desc">Thought leadership on AI transparency and accountability in clinical settings.</span>
+        <span class="card-cta">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+      <a class="card fade-in" href="./blog/rsna-2025-five-trends-shaping-radiologys-next-chapter.html" target="_blank">
+        <span class="card-company">Rad AI</span>
+        <span class="card-title">RSNA 2025: Five Trends Shaping Radiology's Next Chapter</span>
+        <span class="card-desc">Conference-tied industry analysis on emerging radiology trends.</span>
+        <span class="card-cta">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+      <a class="card fade-in" href="./blog/a-day-in-the-life-of-modern-radiology.html" target="_blank">
+        <span class="card-company">Rad AI</span>
+        <span class="card-title">A Day in the Life of Modern Radiology</span>
+        <span class="card-desc">Narrative piece on how AI is reshaping the daily radiologist experience.</span>
         <span class="card-cta">Read Article <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </a>
     </div>
@@ -287,23 +307,72 @@
 
   <section class="section" id="website-work">
     <div class="section-header">
-      <span class="section-number">05</span>
+      <span class="section-number">04</span>
       <h2 class="section-title">Website Work</h2>
     </div>
-    <p class="section-desc">UI/UX, branding, and content strategy for healthcare technology and biopharma organizations.</p>
+    <p class="section-desc">Full-page website work for two healthcare companies, including UI/UX, branding, copywriting, and Webflow CMS management.</p>
     <div class="website-grid">
       <a class="website-card" href="https://github.com/nicolebroomhead/rad-ai-website-work" target="_blank">
         <span class="website-card-label">Webflow — Healthcare AI</span>
         <span class="website-card-title">Rad AI Website — Selected Pages</span>
-        <span class="website-card-desc">UI/UX, branding, and content strategy for a leading radiology AI company.</span>
+        <span class="website-card-desc">UI/UX, branding, copywriting, imagery direction, interactivity, and Webflow CMS management for a leading radiology AI company.</span>
         <span class="website-card-url">www.radai.com</span>
       </a>
       <a class="website-card" href="https://github.com/nicolebroomhead/mindset-integrated-website-work" target="_blank">
         <span class="website-card-label">WordPress — Healthcare Startup</span>
         <span class="website-card-title">Mindset Integrated Website Redesign</span>
-        <span class="website-card-desc">Full site redesign and rebuild on WordPress for a brain injury imaging startup.</span>
+        <span class="website-card-desc">Full site redesign and rebuild on WordPress for a brain injury imaging startup, including audience segmentation.</span>
         <span class="website-card-url">mindsetintegrated.com</span>
       </a>
+    </div>
+  </section>
+
+  <section class="section" id="video">
+    <div class="section-header">
+      <span class="section-number">05</span>
+      <h2 class="section-title">Video</h2>
+    </div>
+    <p class="section-desc">Brand, product, and thought leadership video content produced for Rad AI, including commercials, company culture, and executive interviews.</p>
+
+    <!-- Featured: Launch Day 2024 -->
+    <div class="video-featured">
+      <p class="video-label" style="margin-bottom:10px;">Rad AI — Featured</p>
+      <p class="video-title" style="margin-bottom:14px;">Rad AI Launch Day 2024</p>
+      <div class="video-embed">
+        <iframe src="https://drive.google.com/file/d/1rwmUeTcdtfAP-i7D2bqrBi_roRnfCJ1D/preview" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- YouTube videos -->
+    <div class="video-grid">
+      <div class="video-block fade-in">
+        <p class="video-label">Rad AI — Culture</p>
+        <p class="video-title">Life at Rad AI</p>
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/5NS4m9lMgMI" title="Life at Rad AI" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        </div>
+      </div>
+      <div class="video-block fade-in">
+        <p class="video-label">Rad AI — Product</p>
+        <p class="video-title">Pitfalls of Legacy Radiology Reporting Software</p>
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/asn4U8w1A4I" title="Pitfalls of Legacy Radiology Reporting Software" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        </div>
+      </div>
+      <div class="video-block fade-in">
+        <p class="video-label">Rad AI — Commercial</p>
+        <p class="video-title">Rad AI Reporting Commercial</p>
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/NhHII0Uzjeg" title="Rad AI Reporting Commercial" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        </div>
+      </div>
+      <div class="video-block fade-in">
+        <p class="video-label">Rad AI — Thought Leadership</p>
+        <p class="video-title">Healthcare AI Should Simplify Care, Not Create More Complexity | Ainsley MacLean, MD</p>
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/dswY1RyZvVo" title="Healthcare AI Should Simplify Care, Not Create More Complexity" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -311,6 +380,7 @@
 
 <footer>
   <p>Nicole Broomhead &nbsp;·&nbsp; San Diego, CA &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/nicolebroomhead/" target="_blank">LinkedIn</a></p>
+  <p style="margin-top:8px; font-size:12px; opacity:0.5;">Work samples are for portfolio purposes only. Redacted files have had proprietary data removed.</p>
 </footer>
 
 </body>
