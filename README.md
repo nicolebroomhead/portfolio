@@ -1,6 +1,7 @@
 # Nicole Broomhead — Marketing Portfolio
 
-**About Me:** Senior marketing leader with 10+ years of experience in healthcare AI, radiology AI, and biopharma. This repository showcases a curated selection of work samples organized by strategic impact, including brand narratives, sales enablement, and go-to-market execution.
+**About Me:** Marketing Communications expert with 10+ years of experience in demand generation, content strategy, and integrated campaign management for venture- backed healthcare AI and life sciences companies.
+Proven track record of scaling brand authority, accelerating pipeline, and supporting sales enablement across enterprise and SMB B2B audiences. Adept at translating complex clinical and technical products into compelling narratives that resonate with executive, clinical, and IT stakeholders.
 
 ---
 
