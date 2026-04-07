@@ -44,7 +44,7 @@ Product onesheets, brochures, and clinical impact stories showcasing product eff
 | [Colorado Imaging Case Study](./onesheets-case-studies/colorado-imaging-associates-rad-ai-impressions-case-study.pdf) | Rad AI | Implementation story highlighting measurable efficiency results for large groups. |
 | [CT CoPilot Brochure](./onesheets-case-studies/ct-copilot-brochure-cortechs.pdf) | Cortechs.ai | Product brochure for an AI-powered neuroimaging analysis tool. |
 | [OnQ Prostate Onesheet](./onesheets-case-studies/onq-prostate-onesheet-cortechs.pdf) | Cortechs.ai | Clinical onesheet for a prostate MRI analysis product. |
-| [Investor Brief](./onesheets-case-studies/mindset-integrated-investor-brief-redacted.pdf) | Mindset Integrated | Strategic communications for an early-stage brain injury imaging startup. |
+| [Executive/Investor Brief](./onesheets-case-studies/mindset-integrated-executive-brief-redacted.pdf) | Mindset Integrated | Strategic executive summary for an early-stage neurotechnology company specializing in legal-grade brain data analysis. |
 
 ---
 
