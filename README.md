@@ -1,7 +1,8 @@
 # Nicole Broomhead — Marketing Portfolio
 
-**About Me:** Marketing Communications expert with 10+ years of experience in demand generation, content strategy, and integrated campaign management for venture- backed healthcare AI and life sciences companies.
-Proven track record of scaling brand authority, accelerating pipeline, and supporting sales enablement across enterprise and SMB B2B audiences. Adept at translating complex clinical and technical products into compelling narratives that resonate with executive, clinical, and IT stakeholders.
+**About Me:** Marketing Communications expert with 10+ years of experience in demand generation, content strategy, and integrated campaign management for venture-backed healthcare AI and life sciences companies.
+
+**See Portflio:** https://nicolebroomhead.github.io/portfolio/
 
 ---
 
